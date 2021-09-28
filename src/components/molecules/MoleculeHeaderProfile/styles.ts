@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { Dimensions } from 'react-native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 const { height } = Dimensions.get('screen');
 
@@ -20,4 +20,18 @@ export const ImageProfile = styled.Image`
 
 export const ContainerProfileInfo = styled.View`
   margin-left: 10px;
+`;
+
+export const ButtonScore = styled.TouchableOpacity`
+  border-width: 1px;
+  border-color: ${({ theme }) => theme.colors.gray_400};
+  border-radius: 10px;
+  padding: 13px;
+  margin-left: auto;
+`;
+
+const imgTrophySize = 30;
+export const ImageTrophy = styled.Image`
+  width: ${imgTrophySize}px;
+  height: ${imgTrophySize}px;
 `;

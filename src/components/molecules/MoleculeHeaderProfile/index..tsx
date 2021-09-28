@@ -1,9 +1,16 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
+
 import AtomDescriptionText from '../../atoms/AtomDescriptionText';
 import AtomTitleText from '../../atoms/AtomTitleText';
-
-import { Container, ContainerProfileInfo, ImageProfile } from './styles';
+import trophyImg from '../../../assets/trophy.png';
+import {
+  ButtonScore,
+  Container,
+  ContainerProfileInfo,
+  ImageProfile,
+  ImageTrophy,
+} from './styles';
 
 const MoleculeHeaderProfile: React.FC = () => {
   const { colors } = useTheme();
@@ -18,10 +25,15 @@ const MoleculeHeaderProfile: React.FC = () => {
 
       <ContainerProfileInfo>
         <AtomTitleText color={colors.black}>John Doe</AtomTitleText>
+
         <AtomDescriptionText color={colors.gray_400} style={{ fontSize: 16 }}>
           Software Engineer
         </AtomDescriptionText>
       </ContainerProfileInfo>
+
+      <ButtonScore>
+        <ImageTrophy source={trophyImg} />
+      </ButtonScore>
     </Container>
   );
 };
