@@ -4,14 +4,14 @@ import { useNavigation } from '@react-navigation/native';
 
 import LoginTemplate from '../../components/templates/LoginTemplate';
 
-const Login: React.FC = () => {
+const LoginScreen: React.FC = () => {
   const { navigate } = useNavigation();
 
   function handleLogin() {
-    navigate('home');
+    navigate('lab');
   }
 
   return <LoginTemplate onPressLogin={handleLogin} />;
 };
 
-export default Login;
+export default LoginScreen;

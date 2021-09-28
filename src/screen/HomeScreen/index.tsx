@@ -2,8 +2,8 @@ import React from 'react';
 
 import HomeTemplate from '../../components/templates/HomeTemplate';
 
-const Home: React.FC = () => {
+const HomeScreen: React.FC = () => {
   return <HomeTemplate />;
 };
 
-export default Home;
+export default HomeScreen;
