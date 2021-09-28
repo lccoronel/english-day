@@ -24,11 +24,12 @@ const MoleculeChooseCakerButton: React.FC<MoleculeChooseCakerButtonProps> = ({
   name,
   position,
   sourceUrl,
+  ...rest
 }) => {
   const { colors } = useTheme();
 
   return (
-    <Container>
+    <Container {...rest}>
       {sourceUrl ? (
         <AtomAvatarProfile size={60} sourceUrl={sourceUrl} />
       ) : (

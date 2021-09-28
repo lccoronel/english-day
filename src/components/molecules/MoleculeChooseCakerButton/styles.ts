@@ -20,7 +20,7 @@ export const ContainerEmptyAvatar = styled.View`
   align-items: center;
 `;
 
-const addSize = 30;
+const addSize = 22;
 export const ImageAdd = styled.Image`
   width: ${addSize}px;
   height: ${addSize}px;

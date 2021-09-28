@@ -1,11 +1,20 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "Cheesecake",
     "slug": "mobile",
+    "scheme": "mobile",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "bundleIdentifier": "com.cheesecake.englishday",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.cheesecake.englishday",
+      "versionCode": 1
+    }
   },
-  "name": "mobile"
+  "name": "Cheesecake"
 }
