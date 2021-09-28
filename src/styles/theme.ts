@@ -4,6 +4,7 @@ export default {
     gray_400: '#BDBDBD',
     gray_500: '#828282',
     white: '#FFFFFF',
+    black: '#000000',
   },
 
   fonts: {
