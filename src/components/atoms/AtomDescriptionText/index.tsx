@@ -11,8 +11,13 @@ interface AtomDescriptionTextProps extends TextProps {
 const AtomDescriptionText: React.FC<AtomDescriptionTextProps> = ({
   children,
   color,
+  ...rest
 }) => {
-  return <Container color={color}>{children}</Container>;
+  return (
+    <Container color={color} {...rest}>
+      {children}
+    </Container>
+  );
 };
 
 export default AtomDescriptionText;

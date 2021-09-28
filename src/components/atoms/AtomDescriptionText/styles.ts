@@ -12,5 +12,5 @@ export const Container = styled.Text<ContainerProps>`
   color: ${({ color }) => color};
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(18)}px;
-  margin-top: ${width / 3}px;
+  /* margin-top: ${width / 3}px; */
 `;
