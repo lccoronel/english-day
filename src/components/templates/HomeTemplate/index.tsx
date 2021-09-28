@@ -10,6 +10,7 @@ import checkImg from '../../../assets/check.png';
 import voteImg from '../../../assets/raise-hand.png';
 
 import { Container, ContainerCardsInfo } from './styles';
+import MoleculeEnglishGame from '../../molecules/MoleculeEnglishGame';
 
 const HomeTemplate: React.FC = () => {
   const { colors } = useTheme();
@@ -36,6 +37,8 @@ const HomeTemplate: React.FC = () => {
           amountVotes={45}
         />
       </ContainerCardsInfo>
+
+      <MoleculeEnglishGame />
     </Container>
   );
 };
