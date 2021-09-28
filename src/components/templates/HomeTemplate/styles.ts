@@ -12,3 +12,5 @@ export const ContainerCardsInfo = styled.View`
   justify-content: space-between;
   margin-top: 20px;
 `;
+
+export const ScroolViewHome = styled.ScrollView``;
