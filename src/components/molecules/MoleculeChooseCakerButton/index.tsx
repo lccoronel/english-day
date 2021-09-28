@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacityProps } from 'react-native';
+import { Platform, TouchableOpacityProps } from 'react-native';
 import { useTheme } from 'styled-components';
 
 import AtomAvatarProfile from '../../atoms/AtomAvatarProfile';
@@ -30,7 +30,7 @@ const MoleculeChooseCakerButton: React.FC<MoleculeChooseCakerButtonProps> = ({
   return (
     <Container>
       {sourceUrl ? (
-        <AtomAvatarProfile size={70} sourceUrl={sourceUrl} />
+        <AtomAvatarProfile size={60} sourceUrl={sourceUrl} />
       ) : (
         <ContainerEmptyAvatar>
           <ImageAdd source={addImg} />
@@ -43,7 +43,7 @@ const MoleculeChooseCakerButton: React.FC<MoleculeChooseCakerButtonProps> = ({
             <AtomTitleText color={colors.black}>{name}</AtomTitleText>
             <AtomDescriptionText
               color={colors.gray_400}
-              style={{ fontSize: 18 }}
+              style={{ fontSize: Platform.OS === 'ios' ? 18 : 16 }}
             >
               {position}
             </AtomDescriptionText>

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 const { height } = Dimensions.get('screen');
@@ -11,7 +11,7 @@ export const Container = styled.View`
 `;
 
 export const ContainerScroll = styled.View`
-  height: ${height / 1.5}px;
+  height: ${Platform.OS === 'ios' ? height / 1.5 : height / 1.6}px;
   margin: 15px 0;
 `;
 

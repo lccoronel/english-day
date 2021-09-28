@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 const { height } = Dimensions.get('screen');
@@ -37,5 +37,5 @@ export const ImageGoogle = styled.Image`
 export const ImageCKL = styled.Image`
   width: 100%;
   height: ${iconSize}px;
-  margin-top: ${height / 4}px;
+  margin-top: ${Platform.OS === 'ios' ? height / 4 : height / 5}px;
 `;

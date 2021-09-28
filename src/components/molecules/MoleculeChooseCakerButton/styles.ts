@@ -10,7 +10,7 @@ export const ContainerInfoCaker = styled.View`
   margin-left: 15px;
 `;
 
-const containerSize = 70;
+const containerSize = 60;
 export const ContainerEmptyAvatar = styled.View`
   width: ${containerSize}px;
   height: ${containerSize}px;

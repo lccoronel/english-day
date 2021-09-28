@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screen/HomeScreen';
@@ -22,8 +22,8 @@ const BottomNavigator: React.FC = () => {
         tabBarStyle: {
           elevation: 0,
           shadowOpacity: 0,
-          height: 80,
-          paddingTop: 20,
+          height: Platform.OS === 'ios' ? 70 : 60,
+          paddingTop: Platform.OS === 'ios' ? 20 : 0,
         },
         tabBarIconStyle: {
           width: 15,
