@@ -1,5 +1,6 @@
 export default {
   colors: {
+    blue_300: '#9BBCFF',
     blue_500: '#115EFB',
 
     gray_300: '#F5F5F5',

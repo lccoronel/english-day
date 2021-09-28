@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import { useTheme } from 'styled-components';
 
 import AtomDescriptionText from '../../atoms/AtomDescriptionText';
@@ -20,7 +20,7 @@ interface LoginTemplateProps {
 const LoginTemplate: React.FC<LoginTemplateProps> = ({ onPressLogin }) => {
   const { colors } = useTheme();
 
-  const { width } = Dimensions.get('screen');
+  const { height } = Dimensions.get('screen');
 
   return (
     <Container>
@@ -30,7 +30,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({ onPressLogin }) => {
 
       <AtomDescriptionText
         color={colors.gray_500}
-        style={{ marginTop: width / 3 }}
+        style={{ marginTop: Platform.OS === 'ios' ? height / 6 : height / 8 }}
       >
         Let`s start with login:
       </AtomDescriptionText>

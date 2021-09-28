@@ -11,13 +11,6 @@ export const Container = styled.View`
   align-items: center;
 `;
 
-const imgSize = 60;
-export const ImageProfile = styled.Image`
-  width: ${imgSize}px;
-  height: ${imgSize}px;
-  border-radius: 50px;
-`;
-
 export const ContainerProfileInfo = styled.View`
   margin-left: 10px;
 `;
