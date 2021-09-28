@@ -4,7 +4,7 @@ export const Container = styled.TouchableOpacity`
   width: 100%;
   height: 200px;
   background-color: ${({ theme }) => theme.colors.blue_500};
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 20px;
   padding: 20px;
 `;

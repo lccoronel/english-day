@@ -5,3 +5,10 @@ export const Container = styled.View`
   padding: 0 20px;
   background-color: ${({ theme }) => theme.colors.white};
 `;
+
+export const ContainerCardsInfo = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
