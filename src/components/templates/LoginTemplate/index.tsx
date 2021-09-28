@@ -13,7 +13,11 @@ import {
   ImageCKL,
 } from './styles';
 
-const LoginTemplate: React.FC = () => {
+interface LoginTemplateProps {
+  onPressLogin: () => void;
+}
+
+const LoginTemplate: React.FC<LoginTemplateProps> = ({ onPressLogin }) => {
   const { colors } = useTheme();
 
   const { width } = Dimensions.get('screen');
@@ -31,7 +35,7 @@ const LoginTemplate: React.FC = () => {
         Let`s start with login:
       </AtomDescriptionText>
 
-      <ButtonSocialLogin>
+      <ButtonSocialLogin onPress={onPressLogin}>
         <ImageGoogle source={googleImg} />
         <AtomDescriptionText color={colors.gray_500}>
           CONTINUE WITH GOOGLE
