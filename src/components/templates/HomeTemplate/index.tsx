@@ -1,6 +1,7 @@
 import React from 'react';
 import { Linking } from 'react-native';
 import { useTheme } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
 
 import AtomTitleTextLarge from '../../atoms/AtomTitleTextLarge';
 import MoleculeVotingDayCard from '../../molecules/MoleculeVotingDayCard';
@@ -14,6 +15,7 @@ import voteImg from '../../../assets/raise-hand.png';
 import { Container, ContainerCardsInfo, ScroolViewHome } from './styles';
 
 const HomeTemplate: React.FC = () => {
+  const { navigate } = useNavigation();
   const { colors } = useTheme();
 
   return (
@@ -22,7 +24,7 @@ const HomeTemplate: React.FC = () => {
       <ScroolViewHome showsVerticalScrollIndicator={false}>
         <AtomTitleTextLarge color={colors.black}>Home</AtomTitleTextLarge>
 
-        <MoleculeVotingDayCard />
+        <MoleculeVotingDayCard onPress={() => navigate('vote')} />
 
         <ContainerCardsInfo>
           <MoleculeInfoCard

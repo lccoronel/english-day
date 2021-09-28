@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions } from 'react-native';
+import { Dimensions, TouchableOpacityProps } from 'react-native';
 import { useTheme } from 'styled-components';
 
 import starImg from '../../../assets/star.png';
@@ -15,12 +15,16 @@ import {
   BorderVote,
 } from './styles';
 
-const MoleculeVotingDayCard: React.FC = () => {
+type MoleculeVotingDayCardProps = TouchableOpacityProps;
+
+const MoleculeVotingDayCard: React.FC<MoleculeVotingDayCardProps> = ({
+  ...rest
+}) => {
   const { colors } = useTheme();
   const { width } = Dimensions.get('screen');
 
   return (
-    <Container>
+    <Container {...rest}>
       <ContainerHeaderCard>
         <ContainerIconType>
           <ImageStar source={starImg} />
